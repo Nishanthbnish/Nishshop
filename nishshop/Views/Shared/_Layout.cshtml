@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">@Html.ActionLink("Home", "Index", "Home")<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">@Html.ActionLink("Category", "Index", "Category")</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">@Html.ActionLink("Brands", "Index", "Brands")</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">@Html.ActionLink("Products", "Index", "Products")</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Category", "Index", "Category")</li>
+                    <li>@Html.ActionLink("Brands", "Index", "Brands")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     -->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer-dark">
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 item">
+                                <h3>Services</h3>
+                                <ul>
+                                    <li><a href="#">Web design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                    <li><a href="#">Hosting</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3 item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">Company</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 item text">
+                                <h3>Company Name</h3>
+                                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                            </div>
+                            <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                        </div>
+                        <p class="copyright">Company Name © 2018</p>
+                    </div>
+
+                </footer>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+<style>
+                        .navbar {
+                    transition: all 0.4s;
+                }
+
+                .navbar .nav-link {
+                    color: #fff;
+                }
+
+                .navbar .nav-link:hover,
+                .navbar .nav-link:focus {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                .navbar .navbar-brand {
+                    color: #fff;
+                }
+
+
+                /* Change navbar styling on scroll */
+                .navbar.active {
+                    background: #fff;
+                    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .navbar.active .nav-link {
+                    color: #555;
+                }
+
+                .navbar.active .nav-link:hover,
+                .navbar.active .nav-link:focus {
+                    color: #555;
+                    text-decoration: none;
+                }
+
+                .navbar.active .navbar-brand {
+                    color: #555;
+                }
+
+
+                /* Change navbar styling on small viewports */
+                @media (max-width: 991.98px) {
+                    .navbar {
+                        background: #fff;
+                    }
+
+                    .navbar .navbar-brand, .navbar .nav-link {
+                        color: #555;
+                    }
+                }
+
+
+
+</style>
+
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
